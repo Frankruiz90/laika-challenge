@@ -1,5 +1,5 @@
 <template class="col-12">
-  <v-toolbar class="nav-list" width="100%" dense>
+  <v-toolbar class="nav-list hidden-md-and-down" width="100%" dense>
     <div class="text-center">
       <v-menu
         open-on-hover
