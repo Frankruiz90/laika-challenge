@@ -10,7 +10,7 @@
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn v-bind="attrs" v-on="on" text>
-            <v-img :src="menu.img" alt="" />
+            <v-img contain :src="menu.img" alt="" />
             {{ menu.title }}
             <v-icon v-if="menu.title !== 'blog'">mdi-chevron-right</v-icon>
           </v-btn>
@@ -66,6 +66,6 @@ export default {
 <style lang="scss" scoped>
 .nav-list {
   position: fixed;
-  z-index: 10;
+  z-index: 1;
 }
 </style>
