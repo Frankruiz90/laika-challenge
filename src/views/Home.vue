@@ -1,15 +1,15 @@
 <template>
-  <hello-world />
+  <carousel />
 </template>
 
 <script>
-import HelloWorld from "../components/HelloWorld";
+import Carousel from "../components/Carousel.vue";
 
 export default {
   name: "Home",
 
   components: {
-    HelloWorld,
+    Carousel,
   },
 };
 </script>
