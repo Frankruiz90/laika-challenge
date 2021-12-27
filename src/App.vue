@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="#603e85" height="80" dark>
+    <v-app-bar app color="#603e85" class="pa-0" height="100" dark>
       <v-row no-gutters>
         <v-col cols="1">
           <div class="d-block pt-3">
@@ -15,7 +15,7 @@
             <p class="mb-0">Laika</p>
           </div>
         </v-col>
-        <v-col cols="5" class="pt-4">
+        <v-col cols="6" class="pt-4">
           <div class="d-flex aling-center">
             <v-text-field
               placeholder="Encuentra lo mejor para tu mascota"
@@ -81,13 +81,16 @@
         </v-col>
       </v-row>
     </v-app-bar>
-    <v-main>
+    <v-main class="">
+      <nav-list class="mb-5"></nav-list>
+
       <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script>
+import NavList from "../src/components/NavList.vue";
 export default {
   name: "App",
 
@@ -96,6 +99,9 @@ export default {
     products: 1,
     cities: ["Medellin", "Bogota", "Pereira", "Cali"],
   }),
+  components: {
+    NavList,
+  },
 };
 </script>
 
