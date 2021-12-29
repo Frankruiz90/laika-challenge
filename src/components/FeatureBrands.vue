@@ -4,7 +4,7 @@
       <div class="brands-title mb-4">
         <h3>Marcas destacadas</h3>
       </div>
-      <v-sheet class="mx-auto" max-width="800">
+      <v-sheet class="mx-auto" max-width="1000" max-height="120">
         <v-slide-group multiple show-arrows>
           <v-slide-item
             v-for="(brand, index) in brands"
