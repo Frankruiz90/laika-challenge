@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="#603e85" class="pa-0" height="100" dark>
+    <v-app-bar app color="#603e85" class="pa-0 nav-bar" height="100" dark>
       <v-row no-gutters>
         <v-col cols="1">
           <div class="d-block pt-3">
@@ -15,7 +15,7 @@
             <p class="mb-0">Laika</p>
           </div>
         </v-col>
-        <v-col cols="6" class="pt-4">
+        <v-col cols="6" class="pt-4 hidden-md-and-down">
           <div class="d-flex aling-center">
             <v-text-field
               placeholder="Encuentra lo mejor para tu mascota"
@@ -29,7 +29,7 @@
             </v-text-field>
           </div>
         </v-col>
-        <v-col cols="1" class="pt-4">
+        <v-col  class="pt-4 col-2 col-md-1">
           <div class="d-flex aling-center justify-center">
             <v-img
               src="../src/assets/Flag_of_Colombia.png"
@@ -40,7 +40,7 @@
             ></v-img>
           </div>
         </v-col>
-        <v-col cols="1" class="pt-4">
+        <v-col class="pt-4 col-2 col-md-1">
           <div class="d-flex aling-center">
             <v-select
               v-model="city"
@@ -52,7 +52,7 @@
             ></v-select>
           </div>
         </v-col>
-        <v-col cols="2">
+        <v-col  class="col-4 col-md-2">
           <div class="d-flex align-center justify-center bar-user">
             <a href="" class="bar__link">
               <div class="bar__link-icon me-2">
@@ -64,7 +64,7 @@
             </a>
           </div>
         </v-col>
-        <v-col cols="1">
+        <v-col  class="col-2 col-md-1">
           <div class="d-flex align-center justify-center bar-user">
             <v-badge color="red" :content="products">
               <div class="d-flex align-center justify-center bar-user">
@@ -77,6 +77,20 @@
                 </a>
               </div>
             </v-badge>
+          </div>
+        </v-col>
+        <v-col cols="12" class="pt-4 hidden-lg-and-up show-md-and-down">
+          <div class="d-flex aling-center">
+            <v-text-field
+              placeholder="Encuentra lo mejor para tu mascota"
+              outlined
+              dense
+              background-color="white"
+              color="black"
+              light
+            >
+              <v-icon slot="append" color="grey"> mdi-magnify </v-icon>
+            </v-text-field>
           </div>
         </v-col>
       </v-row>
@@ -105,7 +119,16 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.nav-bar {
+  height: 100px;
+  @media (max-width: 1264px) {
+    height: 160px !important;
+    .v-toolbar__content {
+      height: 160px !important;
+    }
+  }
+}
 .bar-user {
   height: 100%;
 }
