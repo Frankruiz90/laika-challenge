@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-contanier align="center">
-      <v-row>
+      <v-row justify="center">
         <div v-for="(card, index) in cards" :key="index" class="card">
           <v-card :loading="loading" class="mx-4 my-12" max-width="270">
             <v-img contain height="150" :src="card.img" class="pa-5"></v-img>
