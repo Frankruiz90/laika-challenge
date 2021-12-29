@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-0 mt-lg-12">
+  <div class=" mt-15 mt-lg-12">
     <v-carousel cycle height="187" hide-delimiter-background show-arrows>
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
         <v-img contain :src="slide.src" />
